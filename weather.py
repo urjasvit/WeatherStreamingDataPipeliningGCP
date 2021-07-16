@@ -24,7 +24,7 @@ class weather():
 
 	def get_weather_api(self):
 	        try:
-	          response = requests.get("https://api.openweathermap.org/data/2.5/weather?id=4930956&units=metric&&appid=4ea54f4ca2a669c858d0c3e4ca63dc85")
+	          response = requests.get("https://api.openweathermap.org/data/2.5/weather?id=4930956&units=metric&&appid=")
 	          data = json.loads(response.text)
 	          requests_cache.install_cache()
 	          return (data)
