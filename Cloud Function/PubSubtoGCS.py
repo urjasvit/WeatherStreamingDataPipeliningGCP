@@ -16,7 +16,7 @@ class LoadToStorage:
         message_chunk=base64.b64decode(self.event['data']).decode('utf-8')
         logging.info("Datapoint validated")
         return message_chunk
-
+        
     def payloadToDf(self,message:str) -> pd.DataFrame:
         try:
           data = json.loads(message)
@@ -32,11 +32,12 @@ class LoadToStorage:
                 new_json[key] = data[key]
           print(new_json)
           print(newkey)
-          filter_cols = ['main_temp', 'main_temp_min', 'main_temp_max', 'visibility', 'wind_speed', 'dt', 'sys_type', 'sys_sunrise', 'sys_sunset', 'timezone', 'name', 'new_weather_main']
+          filter_cols = ['main_temp', 'main_temp_min', 'main_temp_max', 'visibility', 'wind_speed', 'dt', 'main_humidity', 'name', 'new_weather_main','new_weather_description']
           for (element, value) in new_json.items():
               if(element in filter_cols):
                   newkey[element] = value
           df=pd.DataFrame(newkey, index=[0])
+          print(df)
           if not df.empty:
               logging.info("DF created")
           else:
