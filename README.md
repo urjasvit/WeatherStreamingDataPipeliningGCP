@@ -12,6 +12,11 @@ Below is the architecture and data flow diagram that provides the overview of th
 
 ![image](https://user-images.githubusercontent.com/25616463/126040597-95d9fdfd-cdc4-48e1-99c7-ff1487a4deca.png)
 
+# Google Data Studio Dashboard: Real-time Weather Streaming Analyis
+
+![image](https://user-images.githubusercontent.com/25616463/126191992-9d15c178-2c8c-48b2-9ed0-2f84e0fac77d.png)
+
+
 # Resources
 
 Google Cloud: 
